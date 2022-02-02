@@ -18,7 +18,8 @@ describe('FreakOutAdapter', function () {
     let bid = {
       bidder: 'freakout',
       params: {
-        adspot_id: 'ABCD1234'
+        adspot_id: 'ABCD1234',
+        ad_type: 14
       }
     };
 
@@ -39,7 +40,8 @@ describe('FreakOutAdapter', function () {
       {
         bidder: 'freakout',
         params: {
-          adspot_id: 'ABCD1234'
+          adspot_id: 'ABCD1234',
+          ad_type: 14
         },
         adUnitCode: 'adunit-code',
         sizes: [
@@ -64,7 +66,7 @@ describe('FreakOutAdapter', function () {
       const requests = spec.buildRequests(bidRequests, bidderRequest);
       expect(requests[0].url).to.equal(ENDPOINT);
       expect(requests[0].method).to.equal('GET');
-      expect(requests[0].data).to.equal(`adspot_id=ABCD1234&media_url=https%3A%2F%2Fexample.com&hb=prebidjs&pb_ver=${prebid.version}&pb_adapter_ver=${ADAPTER_VERSION}&pb_tid=791e9d84-af92-4903-94da-24c7426d9d0c&pb_bid=2b84475b5b636e&cur=JPY&sizes=300x250%2C320x50%2C320x100&`);
+      expect(requests[0].data).to.equal(`adspot_id=ABCD1234&ad_type=14&media_url=https%3A%2F%2Fexample.com&hb=prebidjs&pb_ver=${prebid.version}&pb_adapter_ver=${ADAPTER_VERSION}&pb_tid=791e9d84-af92-4903-94da-24c7426d9d0c&pb_bid=2b84475b5b636e&cur=JPY&sizes=300x250%2C320x50%2C320x100&`);
     });
   });
 
@@ -74,6 +76,7 @@ describe('FreakOutAdapter', function () {
         bidder: 'freakout',
         params: {
           adspot_id: 'ABCD1234',
+          ad_type: 14
         },
         adUnitCode: 'adunit-code',
         sizes: [

@@ -30,7 +30,8 @@ var adUnits = [
         bids: [{
             bidder: 'freakout',
             params: {
-                adspot_id: 'NDgxOjUx'
+                adspot_id: 'NDgxOjUx',
+                ad_type: 14
             }
         }]
     }
