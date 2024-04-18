@@ -1,7 +1,8 @@
 import {registerBidder} from '../src/adapters/bidderFactory.js';
-import {tryAppendQueryString, isEmpty} from '../src/utils.js';
+import {isEmpty} from '../src/utils.js';
 import {BANNER, NATIVE, VIDEO} from '../src/mediaTypes.js';
 import {config} from '../src/config.js';
+import {tryAppendQueryString} from '../libraries/urlUtils/urlUtils.js';
 
 const BIDDER_CODE = 'freakout';
 const ENDPOINT = 'https://ad.rfp.fout.jp/ad';
