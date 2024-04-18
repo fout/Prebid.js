@@ -3,7 +3,7 @@ import * as events from 'src/events.js';
 import * as utils from 'src/utils.js';
 import * as sinon from 'sinon';
 import { expect } from 'chai';
-import { EVENTS } from 'src/constants.json';
+import { EVENTS } from 'src/constants.js';
 
 describe('#bidViewabilityIO', function() {
   const makeElement = (id) => {
